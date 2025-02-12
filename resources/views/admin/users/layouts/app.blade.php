@@ -10,7 +10,7 @@
 <body>
     <header>Header default</header>
     @yield('content')
-    <footer></footer>
+    <footer>Footer default</footer>
 </body>
 
 </html>
