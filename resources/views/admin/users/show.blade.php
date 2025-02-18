@@ -10,9 +10,11 @@
     </ul>
 
     <x-alert></x-alert>
-    <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-        @csrf()
-        @method('delete')
-        <button type="submit" class="p-5 bg-red-900 text-black appearance-none">Deletar</button>
-    </form>
+    @can('is-admin')
+        <form action="{{ route('users.destroy', $user->id) }}" method="POST">
+            @csrf()
+            @method('delete')
+            <button type="submit" class="p-5 bg-red-900 text-black appearance-none">Deletar</button>
+        </form>
+    @endcan
 @endsection

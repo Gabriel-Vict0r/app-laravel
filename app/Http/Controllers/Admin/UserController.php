@@ -28,8 +28,6 @@ class UserController extends Controller
 
     public function edit(string $id)
     {
-        //$user = User::where('id', '=', $id)->first();
-        //$user = User::where('id', $id)->first();
         $user = User::find($id);
         if (! $user) {
             return redirect()->route('users.index')->with('message', 'Usuário não encontrado');
