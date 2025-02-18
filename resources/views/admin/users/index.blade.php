@@ -21,7 +21,9 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td class=""><a href="{{ route('users.edit', $user->id) }}" class=" text-blue-500 p-5">Editar</a>
+                    <td>
+                        <a href="{{ route('users.index', $user->id) }}" class=" text-blue-500 p-5">Editar</a>
+                        <a href="{{ route('users.show', $user->id) }}" class="text-green-500 p-5">Detalhes</a>
                     </td>
                 </tr>
             @empty
